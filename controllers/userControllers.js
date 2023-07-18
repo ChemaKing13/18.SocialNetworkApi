@@ -63,4 +63,29 @@ module.exports = {
             res.status(500).json(err); 
         }
     },
+   // Add a new friend to a user's friend list
+    async addFriend(req, res) {
+        try {
+        const { userId, friendId } = req.params;
+
+           // Find the user and friend objects
+         const user = await User.findById(userId);
+         const friend = await User.findById(friendId);
+
+        // Check if the friend is already in the user's friend list
+        if (user.friends.includes(friendId)) {
+            return res.status(400).json({ message: 'Friend already in the list' });
+        }
+  
+        // Add the friend to the user's friend list
+        user.friends.push(friendId);
+        await user.save();
+  
+        res.json({ message: 'Friend added successfully', user });
+        } catch (err) {
+        console.log('Error:', err)
+        res.status(500).json(err);
+        }
+    },
+  
 }; 
