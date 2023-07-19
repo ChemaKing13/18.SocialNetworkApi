@@ -2,7 +2,7 @@ const { Schema, model, Types } = require('mongoose');
 
 // Reaction Schema
 const reactionSchema = new Schema({
-  reactionId: {
+  reactionId: { //automatically assigned a new unique ObjectId
     type: Schema.Types.ObjectId,
     default: () => new Types.ObjectId(),
   },
@@ -23,6 +23,7 @@ const reactionSchema = new Schema({
   },
 });
 
+//thoughtSchema its not a model, but represents a schema for the thought model
 const thoughtSchema = new Schema(
   {
     thoughtText: {
