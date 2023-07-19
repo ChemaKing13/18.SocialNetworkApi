@@ -75,11 +75,8 @@ module.exports = {
         { _id: req.params.userId },
         { $addToSet: { friends: req.params.friendId } },
         { new: true }
-      )
-        .select('-__v')
-        .populate('friends')
-        .populate('thoughts');
-  
+      ); 
+      
       if (!userData) {
         return res.status(404).json({ message: 'No user with this ID' });
       }
