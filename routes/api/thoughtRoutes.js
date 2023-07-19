@@ -7,6 +7,7 @@ const {
     updateThought,
     deleteThought,
     createReation,
+    deleteReaction,
 
     
 
@@ -27,5 +28,9 @@ router
 router
     .route('/:thoughtId/reactions')
     .post(createReation)
-
+    
+router
+    .route('/:thoughtId/reactions/:reactionId')
+    .delete(deleteReaction)
+    
 module.exports = router; 
