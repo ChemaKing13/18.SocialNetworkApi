@@ -9,6 +9,7 @@ const reactionSchema = new Schema({
   reactionBody: {
     type: String,
     required: true,
+    minLength: 1,
     maxLength: 280,
   },
   username: {
@@ -22,24 +23,32 @@ const reactionSchema = new Schema({
   },
 });
 
-const thoughtSchema = new Schema({
-  thoughtText: {
+const thoughtSchema = new Schema(
+  {
+    thoughtText: {
     type: String,
     required: true,
     minLength: 1,
     maxLength: 280,
-  },
-  createdAt: {
+    },
+    createdAt: {
     type: Date,
     default: Date.now,
     get: (timestamp) => new Date(timestamp).toISOString(),
-  },
-  username: {
+    },
+    username: {
     type: String,
     required: true,
+    },
+    reactions: [reactionSchema],
   },
-  reactions: [reactionSchema],
-});
+  {
+    toJSON: {
+      virtuals: true,
+    },
+    id: false,
+  }
+);
 
 thoughtSchema
 .virtual('reactionCount')
