@@ -10,10 +10,11 @@ This is a RESTful API for a social network application. It allows users to creat
 - [Usage](#usage)
 - [API Routes](#api-routes)
 - [License](#license)
+- [Credits](#credits)
 
 ## Technologies Used 
-- [![Node.js](https://img.shields.io/badge/Node.js-^version-brightgreen.svg)](https://nodejs.org/)
-- [![Express.js](https://img.shields.io/badge/Express.js-^version-blue.svg)](https://expressjs.com/)
+- Node.js
+- Express.js
 - MongoDB
 - Mongoose
 
@@ -46,4 +47,7 @@ This is a RESTful API for a social network application. It allows users to creat
 
 ## License
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+##Credits 
+
 
