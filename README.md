@@ -11,6 +11,7 @@ This is a RESTful API for a social network application. It allows users to creat
 - [API Routes](#api-routes)
 - [License](#license)
 - [Credits](#credits)
+- [Demo](#demo)
 
 ## Technologies Used 
 - Node.js
@@ -48,6 +49,14 @@ This is a RESTful API for a social network application. It allows users to creat
 ## License
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-##Credits 
+## Credits 
+In order to complete this challenge, I applied the knowledge seen in class, as well as additional resources from the Internet, such as articles and videos.
+- https://www.mongodb.com/docs/manual/reference/method/cursor.skip/
+- https://mongoosejs.com/docs/tutorials/findoneandupdate.html
+- https://www.mongodb.com/docs/manual/reference/method/connect/
+- https://www.geeksforgeeks.org/mongoose-mongoose-model-function/
+- https://www.geeksforgeeks.org/mongoose-findoneanddelete-function/
 
+## Demo 
+You can checkout how does the API works [Here]()
 
