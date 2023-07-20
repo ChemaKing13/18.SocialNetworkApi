@@ -12,8 +12,8 @@ This is a RESTful API for a social network application. It allows users to creat
 - [License](#license)
 
 ## Technologies Used 
-- Node.js
-- Express.js
+- [![Node.js](https://img.shields.io/badge/Node.js-^version-brightgreen.svg)](https://nodejs.org/)
+- [![Express.js](https://img.shields.io/badge/Express.js-^version-blue.svg)](https://expressjs.com/)
 - MongoDB
 - Mongoose
 
